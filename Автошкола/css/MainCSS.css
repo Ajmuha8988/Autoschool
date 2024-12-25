@@ -40,17 +40,22 @@
     src: local('Lorenzo_Sans_Medium'),
 	   url('/font/Lorenzo_Sans_Medium.ttf') format('ttf');
 }
-
+.Lorenzo-regular{
+    font-family: Lorenzo_Sans;
+    font-style: normal ;
+	font-weight: normal;
+}
 .Lorenzo-bold{
     font-family: Lorenzo_Sans;
     font-style: normal ;
 	font-weight: bold;
 }
 .header{
-    padding-top: 30px;
+    padding-top: 10px;
     position: relative;
     min-height: 1240px;
-    background: linear-gradient(351deg, rgba(2,0,36,1) 0%, rgba(9,83,38,1) 47%, rgba(5,42,82,1) 100%);
+    background: rgb(2,0,36);
+    background: linear-gradient(351deg, rgba(2,0,36,1) 0%, rgba(9,83,38,1) 47%, rgba(5,42,82,1) 100%, rgba(5,42,82,1) 100%);
     clip-path: polygon(100% 0, 100% 90%, 50% 100%, 0 90%, 0 0);
 }
 .begin_list{
@@ -89,14 +94,22 @@
     width: 250px;
     height: 50px;
 }
+.bg-nav {
+background: linear-gradient(313deg, rgba(2,0,36,1) 0%, rgba(9,83,38,1) 0%, rgba(7,59,64,1) 0%, rgba(5,42,82,1) 100%, rgba(5,42,82,1) 100%);}
 .navbar { transition: background-color 0.3s;  }
-.navbar.scrolled { background-color: orange; }
-@media (max-width:767px) {
+.navbar.scrolled {
+    background: orange; 
+}
+
+@media (max-width:768px) {
+    .navbar{
+        position: sticky !important;
+    }
     .link2{
         display: none;
     }
     .navbar-background {
-        background-color: orange;
+        background: orange !important;
     }
     .header{
         min-height: 800px;
@@ -118,11 +131,21 @@
         margin-top: 75px;
         position: absolute;
     }
-}
-@media (max-width:1023px) {
-    html, body{
-        overflow-x: hidden !important;
+    .none-flex{
+        display: block !important;
     }
+    .change-pad{
+        padding-top: 50px !important;
+    }
+    .img-res{
+        max-width: 100%;
+        height: auto;
+    }
+}
+@media (max-width:1023px) and (min-width: 768px) {
+     /* html, body{
+        overflow-x: hidden !important;
+    }  */
     .link2{
         display: none;
     }
@@ -132,20 +155,31 @@
     .between_list{
         margin-left: 0px;
     }
+    
     .img-none{
-        height: 760px;
-        width: 760px;
+        width: 500px;
+        height: 769px;
+    }
+    /* .mx-55{
+        width: 350px;
+        margin-left: 0px !important;
+        margin-top: 550px;
+        position: absolute;
+    } */
+    .img-res{
+        width: 100%;
+        height: auto;
     }
 }
-@media (max-width:1290px) {
-    html, body{
+@media (max-width:1280px) and (min-width: 1023px)  {
+    /* html, body{
         overflow-x: hidden !important;
-    }
+    } */
     .between_list{
         margin-left: 0px;
     }
     .img-none{
-        height: 760px;
-        width: 760px;
+        width: 500px;
+        height: 769px;
     }
 }
